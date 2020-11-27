@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { toUnicode } from 'punycode';
 
 @Component({
   selector: 'app-counter',
@@ -8,12 +7,17 @@ import { toUnicode } from 'punycode';
 })
 export class CounterComponent implements OnInit {
 
-  count = 0;
-  increaseButtonAppear: boolean = true;
-  decreaseButtonAppear: boolean = true;
-  textBackgroundColor: string = 'white';
+  count: number;
+  increaseButtonAppear: boolean;
+  decreaseButtonAppear: boolean;
+  textBackgroundColor: string;
 
-  constructor() { }
+  constructor() {
+    this.count = 0;
+    this.increaseButtonAppear = true;
+    this.decreaseButtonAppear = true;
+    this.textBackgroundColor = 'white';
+  }
 
   ngOnInit(): void {
   }
@@ -44,7 +48,7 @@ export class CounterComponent implements OnInit {
     }
   }
 
-  resetCount(): void{
+  resetCount(): void {
     this.count = 0;
   }
 }
