@@ -58,4 +58,64 @@ describe('CounterComponent', () => {
     // then
     expect(component.increaseButtonAppear).toBe(false);
   });
+
+  it('should disappear decrease button when count < 0', () => {
+
+    // given
+    component.count = -1;
+
+    // when
+    component.changeButton();
+
+    // then
+    expect(component.decreaseButtonAppear).toBe(false);
+  });
+
+  it('should text background color be green when count < 0', () => {
+
+    // given
+    component.count = -1;
+
+    // when
+    component.changeColor();
+
+    // then
+    expect(component.textBackgroundColor).toBe('green');
+  });
+
+  it('should text background color be red when count > 10', () => {
+
+    // given
+    component.count = 11;
+
+    // when
+    component.changeColor();
+
+    // then
+    expect(component.textBackgroundColor).toBe('red');
+  });
+
+  it('should text background color be white when count = 0', () => {
+
+    // given
+    component.count = 0;
+
+    // when
+    component.changeColor();
+
+    // then
+    expect(component.textBackgroundColor).toBe('white');
+  });
+
+  it('should text background color be white when count = 10', () => {
+
+    // given
+    component.count = 10;
+
+    // when
+    component.changeColor();
+
+    // then
+    expect(component.textBackgroundColor).toBe('white');
+  });
 });
