@@ -20,14 +20,10 @@ export class CounterComponent implements OnInit {
 
   increaseCount(): void {
     this.count++;
-    this.changeButton();
-    this.changeColor();
   }
 
   decreaseCount(): void {
     this.count--;
-    this.changeButton();
-    this.changeColor();
   }
 
   changeButton(): void {
