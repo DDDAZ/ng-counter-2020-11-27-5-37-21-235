@@ -46,4 +46,16 @@ describe('CounterComponent', () => {
     // then
     expect(component.count).toBe(-1);
   });
+
+  it('should disappear increase button when count > 10', () => {
+
+    // given
+    component.count = 11;
+
+    // when
+    component.changeButton();
+
+    // then
+    expect(component.increaseButtonAppear).toBe(false);
+  });
 });
