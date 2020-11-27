@@ -118,4 +118,16 @@ describe('CounterComponent', () => {
     // then
     expect(component.textBackgroundColor).toBe('white');
   });
+
+  it('should count be reset as 0 when click reset button', () => {
+
+    // given
+    component.count = 5;
+
+    // when
+    component.resetCount();
+
+    // then
+    expect(component.count).toBe(0);
+  });
 });

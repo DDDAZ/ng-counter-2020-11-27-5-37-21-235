@@ -1,3 +1,4 @@
 <button (click)="increaseCount(); changeColor(); changeButton()" *ngIf="increaseButtonAppear">+</button>
 <label [ngStyle]="{'background-color': textBackgroundColor}"> number: {{count}} </label>
 <button (click)="decreaseCount(); changeColor(); changeButton()" *ngIf="decreaseButtonAppear">-</button>
+<button (click)="resetCount(); changeColor(); changeButton()">reset</button>

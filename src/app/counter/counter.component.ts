@@ -43,4 +43,8 @@ export class CounterComponent implements OnInit {
       this.textBackgroundColor = 'white';
     }
   }
+
+  resetCount(): void{
+    this.count = 0;
+  }
 }
